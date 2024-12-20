@@ -1,0 +1,13 @@
+{
+	frankenphp
+}
+
+# The domain name of your server
+:80 {
+	# Set the webroot to the public/ directory
+	root * /app/public/
+	# Enable compression (optional)
+	encode zstd br gzip
+	# Execute PHP files from the public/ directory and serve assets
+	php_server
+}
